@@ -2,7 +2,7 @@
 
 <p align="center"><img src="./images/screenshot.png"></p>
 
-## Introduction
+# Introduction
 
 This project was designed as a way for you to practice and learn about Object Oriented Programming. A good bit of code has already been provided for you, and it makes for an _almost_ working game.
 
@@ -10,7 +10,7 @@ The project is divided in two parts. In a first part, you will fix and implement
 
 Because there is a fair bit of JavaScript in this app, we have split code into more manageable pieces. You wil find all of the code in the `js` folder.
 
-_Because we split the code into many files, we need to import each file, in the right order in the `index.html` file.
+_Because we split the code into many files, we need to add the `<script>` tags in the right order in the `index.html` file._ This is already done for you, but it's important not to change the order.
 
 ## The game
 
@@ -23,7 +23,7 @@ At the moment, the game is a bit broken. This project will have you first fix th
 ## Instructions
 
 1. Open the `index.html` file in your browser, and observe what goes on when you load it.
-2. After reading the instructions of the project, **take a look at the provided code**. Don't worry if you don't understand _everything_, but try to get a general feel for what the code is doing. There are _extensive_ comments throughout the code.
+2. After reading the instructions of the project, **take a look at the provided code**. Don't worry if you don't understand _everything_, but try to get a general feel for what the code is doing. There are extensive comments throughout the code.
 3. Once the provided code has been consulted,go through the Assignment section at your own pace.
 
 ## Assignment
@@ -40,27 +40,17 @@ Here, we are going to rewrite the code of this function to actually check if the
 
 If at least one enemy overlaps the player, then your function should return `true`. Otherwise it should return `false.
 
-A good strategy would be to console.log both this.player and this.enemies. When you look in the console, you will see that those two objects contain the information necessary to detect a collision.
+A good strategy would be to `console.log` both `this.player` and `this.enemies`. When you look in the console, you will see that those two objects contain the information necessary to detect a collision.
 
-As a hint, note that the box of each enemy is defined by its `x` and `y` coordinates and the `ENEMY_WIDTH` and `ENEMY_HEIGHT` constants. There are similar variables for the player.
+_HINT:_ In Javascript, the 0,0 position is the _top left_ corner. This means that if an item is at `{x: 0, y: 0}`, it's in the top left, not the bottom left. As `y` values increase, items move down.
 
-### 2. Let's do some refactoring!
+_HINT:_ A collision takes place when one of the enemy's boxes overlaps the players. All enemies and players are positioned with `x` and `y` coordinates. There are also helpful constants like `ENEMY_HEIGHT` and `PLAYER_HEIGHT` you can use.
 
-Look at the `Player` and `Enemy` classes and notice that their `render` methods are identical. This violates our sacred DRY principle. Let's fix it!
+_HINT:_ Try calling `console.log` on the player. You might notice that you don't have all the information you need. Feel free to modify `Player.js` to add some more info to `this`.
 
-While there are many ways to fix it, here we will do it by creating a superclass called `Entity`. This superclass will not need a constructor, and will only have the `render` method.
+### 2. Flavor it!
 
-Then, we'll make `Player` and `Enemy` extend the `Entity` class, and remove the `render` methods from both classes.
-
-Having done this manipulation will break our constructors. Make sure to fix it by calling the appropriate function from your constructors.
-
-### 3. Flavor it!
-
----
-
-### The sky is not the limit!!
-
-Having completed the basic section of this project is already great! However, this should leave you plenty of time for the fun part: customizing and evolving the game. Since this is an open-ended activity, we will give you some suggestions. Feel free to use them or not.
+Having completed the basic section of this project is already great! However, next up is the fun part: customizing and evolving the game. Since this is an open-ended activity, we will give you some suggestions. Feel free to use them or not.
 
 - Instead of completely stopping the game when it's over, allow the player to start a new game
 - Add a sound track and sound effects to the game
@@ -76,10 +66,14 @@ Having completed the basic section of this project is already great! However, th
 
 In order for the project to be deemed _successful_ and for you to receive a passing grade
 
-- you need to complete steps 1 and 2 completely.
-- add at least 4 _improvements_ to the game.
+- you need to complete step 1 completely.
+- add at least 1 major improvement to the game (that changes the gameplay), and 1 minor improvement (eg. sound effects, "new game" button).
 
 ### Submission
 
+- Open a PR, as you normally would, against the parent repository.
 - Be sure to add a screenshot to the PR.
-- Provide a link to the game in your project portfolio on surge.sh (If you need help setting this up, see someone).
+  - For MacOS, you can use cmd + shift + 4 to open the screenshot tool. Draw a box around the screen. The screenshot will be saved to the Desktop.
+  - For Windows, use the "Snip & Sketch" tool that is provided with Win 10, or "Print Screen" if you are on an earlier version of Windows.
+- Deploy the project to Netlify
+  - View this guide: https://docs.google.com/document/d/1J7ff9h77RMrQadgCM54eziW_Rj5_PAHYpQHYjf2ojZU/edit?usp=sharing
