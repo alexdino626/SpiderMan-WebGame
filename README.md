@@ -74,6 +74,6 @@ In order for the project to be deemed _successful_ and for you to receive a pass
 - Open a PR, as you normally would, against the parent repository.
 - Be sure to add a screenshot to the PR.
   - For MacOS, you can use cmd + shift + 4 to open the screenshot tool. Draw a box around the screen. The screenshot will be saved to the Desktop.
-  - For Windows, the "Print screen" button should take a screenshot. There are many free tools available as well.
+  - For Windows, use the "Snip & Sketch" tool that is provided with Win 10, or "Print Screen" if you are on an earlier version of Windows.
 - Deploy the project to Netlify
   - View this guide: https://docs.google.com/document/d/1J7ff9h77RMrQadgCM54eziW_Rj5_PAHYpQHYjf2ojZU/edit?usp=sharing
