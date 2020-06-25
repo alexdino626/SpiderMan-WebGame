@@ -52,14 +52,15 @@ _HINT:_ Try calling `console.log` on the player. You might notice that you don't
 
 Having completed the basic section of this project is already great! However, next up is the fun part: customizing and evolving the game. Since this is an open-ended activity, we will give you some suggestions. Feel free to use them or not.
 
-- Instead of completely stopping the game when it's over, allow the player to start a new game
-- Add a sound track and sound effects to the game
-- Add the possibility of having lives
-- Increase the difficulty level of the game as time passes by making the enemies go faster
+- Increase/change the size of the gameboard.
+- Instead of completely stopping the game when it's over, allow the player to start a new game.
+- Add a sound track and sound effects to the game.
+- Add the possibility of having lives.
+- Increase the difficulty level of the game as time passes by making the enemies go faster.
 - Allow the enemies and player to have animated sprites instead of the current static ones. You could do this by defining a sprite as an array of images and setting a speed at which these images should switch. This could be implemented in the `render` method.
-- Allow the player to shoot bullets at the Nyan Cats
-- Add another type of entity called `Bonus` that will also fall from the sky and add points to the score
-- Make the game more hardcore by allowing the player to also move up/down and making Nyan Cats also shoot from the left of the screen
+- Allow the player to shoot bullets at the Nyan Cats.
+- Add another type of entity called `Bonus` that will also fall from the sky and add points to the score.
+- Make the game more hardcore by allowing the player to also move up/down and making Nyan Cats also shoot from the left of the screen.
 - **Don't stop!** These suggestions are only here to get you started :)
 
 ## Project Success guidelines
@@ -72,8 +73,6 @@ In order for the project to be deemed _successful_ and for you to receive a pass
 ### Submission
 
 - Open a PR, as you normally would, against the parent repository.
-- Be sure to add a screenshot to the PR.
-  - For MacOS, you can use cmd + shift + 4 to open the screenshot tool. Draw a box around the screen. The screenshot will be saved to the Desktop.
-  - For Windows, use the "Snip & Sketch" tool that is provided with Win 10, or "Print Screen" if you are on an earlier version of Windows.
+- Be sure to add screenshot(s) to the PR.
 - Deploy the project to Netlify
   - View this guide: https://docs.google.com/document/d/1J7ff9h77RMrQadgCM54eziW_Rj5_PAHYpQHYjf2ojZU/edit?usp=sharing
