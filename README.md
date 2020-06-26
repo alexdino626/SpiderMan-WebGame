@@ -76,3 +76,7 @@ In order for the project to be deemed _successful_ and for you to receive a pass
 - Be sure to add screenshot(s) to the PR.
 - Deploy the project to Netlify
   - View this guide: https://docs.google.com/document/d/1J7ff9h77RMrQadgCM54eziW_Rj5_PAHYpQHYjf2ojZU/edit?usp=sharing
+
+### DUE DATE
+
+Your project is due on XX XXX, XXXX by XX:XX.
