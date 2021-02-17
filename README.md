@@ -84,3 +84,6 @@ Your project is due on XX XXX, XXXX by XX:XX.
 ## Useful Links
 
 - https://javascript.info/keyboard-events
+- https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
+- https://www.w3schools.com/jsref/met_element_getboundingclientrect.asp
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
