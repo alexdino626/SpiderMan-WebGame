@@ -66,15 +66,16 @@ Minor changes:
 - A restart button when the game is over.
 - A start button.
 - Animated charaters.
+- Let the player to also move up/down.
+- Make enemies shoot from the sides of the screen too.
 
 Major changes:
-- Add lives system.
+- Add a lives system.
 - Add a score system.
 - Increase the difficulty level of the game as time passes by making the enemies go faster and/or increasing the number of enemies.
-- Allow the player to shoot bullets at the Nyan Cats.
-- Add another type of entity called `Bonus` that will also fall from the sky and add points to the score.
+- Allow the player to shoot bullets at the enemies.
+- Add another type of entity called `Bonus` that the player can pick up for bonus points.
 - Add power ups to the game.
-- Make the game more hardcore by allowing the player to also move up/down and making Nyan Cats also shoot from the sides of the screen.
 
 > **Don't stop!** These suggestions are only here to get you started :)
 
@@ -85,7 +86,7 @@ Major changes:
 In order for the project to be deemed _successful_ and for you to receive a passing grade
 
 - you need to complete step 1 completely.
-- add at least 1 major improvement to the game (that changes the gameplay), and 1 minor improvement (eg. sound effects, "new game" button).
+- add at least 1 major improvement to the game, and 1 minor improvement.
 
 ## Submission
 
@@ -107,6 +108,6 @@ In order for the project to be deemed _successful_ and for you to receive a pass
 
 > For those of you who are not familiar with games and/or their terminology.
 - **Engine**: games usually run off a `game engine`, an environment that powers the game. In this project it's represented by the `Engine.js` file.
-- **Hitbox**: the physical space that an entity occupies in the game. It is usually `rectangular in shape and detects collosions` on it's borders.
+- **Hitbox**: the physical space that an entity occupies in the game. It is usually `rectangular` in shape and `detects collosions` on it's borders.
 - **Gameplay**: the way a game is played. This includes the rules and other factors that affect how a player can play the game.
 - **Gameboard**: the area on screen where the game is played.
