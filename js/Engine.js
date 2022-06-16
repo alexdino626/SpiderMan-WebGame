@@ -70,9 +70,9 @@ class Engine {
     setTimeout(this.gameLoop, 20);
   };
   //Check if isPLayerDead is true then lose one life
-  if(isPLayerDead) {
+  // if(isPLayerDead()) {
     
-  }
+  // }
   // This method is not implemented correctly, which is why
   // the burger never dies. In your exercises you will fix this method.
   isPlayerDead = () => {
@@ -81,9 +81,15 @@ class Engine {
       if(this.player.x < enemy.x + ENEMY_WIDTH &&
         this.player.x + PLAYER_WIDTH > enemy.x &&
         this.player.domElement.y < enemy.domElement.y + ENEMY_HEIGHT &&
-        this.player.domElement.y > enemy.domElement.y)
-        isDead = true
+        this.player.domElement.y > enemy.domElement.y) {
+          enemy.destroyed = true
+          enemy.root.removeChild(enemy.domElement);
+          this.player.lives --
+          this.livesEl.innerHTML = "🕷".repeat(this.player.lives)
+        }
       });
+      if(this.player.lives <= 0)
+      isDead = true
       return isDead;
     } 
 };
