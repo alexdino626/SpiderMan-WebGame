@@ -16,11 +16,14 @@ class Player {
     // We create a DOM node. We will be updating the DOM node every time we move the player, so we store a reference to the
     // DOM node in a property.
     this.domElement = document.createElement('img');
-    this.domElement.src = 'images/player.png';
+    this.domElement.src = 'images/SpiderMan-removebg.png';
     this.domElement.style.position = 'absolute';
     this.domElement.style.left = `${this.x}px`;
     this.domElement.style.top = ` ${y}px`;
     this.domElement.style.zIndex = '10';
+    this.domElement.style.height = `${PLAYER_HEIGHT}px`;
+    this.domElement.style.width = `${PLAYER_WIDTH}px`;
+    this.lives = FULL_LIVES
     root.appendChild(this.domElement);
   }
 
@@ -42,3 +45,5 @@ class Player {
     this.domElement.style.left = `${this.x}px`;
   }
 }
+// const player = new Player()
+// console.log(player)

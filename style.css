@@ -1,0 +1,12 @@
+body {
+    display: flex;
+}
+
+#app {
+    position: relative;
+}
+
+#lives {
+    position: absolute;
+    right: 10px;
+}

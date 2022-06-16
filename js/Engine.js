@@ -16,6 +16,10 @@ class Engine {
     this.enemies = [];
     // We add the background image to the game
     addBackground(this.root);
+    //Lives
+    this.livesEl = document.querySelector("#lives")
+    //Music
+    this.bgm = new Audio("../images/SpiderMan_music.mp3")
   }
 
   // The gameLoop will run every few milliseconds. It does several things
@@ -23,6 +27,8 @@ class Engine {
   //  - Detects a collision between the player and any enemy
   //  - Removes enemies that are too low from the enemies array
   gameLoop = () => {
+    //Music
+    this.bgm.play()
     // This code is to see how much time, in milliseconds, has elapsed since the last
     // time this method was called.
     // (new Date).getTime() evaluates to the number of milliseconds since January 1st, 1970 at midnight.
@@ -45,7 +51,6 @@ class Engine {
     this.enemies = this.enemies.filter((enemy) => {
       return !enemy.destroyed;
     });
-
     // We need to perform the addition of enemies until we have enough enemies.
     while (this.enemies.length < MAX_ENEMIES) {
       // We find the next available spot and, using this spot, we create an enemy.
@@ -64,10 +69,21 @@ class Engine {
     // If the player is not dead, then we put a setTimeout to run the gameLoop in 20 milliseconds
     setTimeout(this.gameLoop, 20);
   };
-
+  //Check if isPLayerDead is true then lose one life
+  if(isPLayerDead) {
+    
+  }
   // This method is not implemented correctly, which is why
   // the burger never dies. In your exercises you will fix this method.
   isPlayerDead = () => {
-    return false;
-  };
-}
+    let isDead = false;
+    this.enemies.forEach((enemy) => {
+      if(this.player.x < enemy.x + ENEMY_WIDTH &&
+        this.player.x + PLAYER_WIDTH > enemy.x &&
+        this.player.domElement.y < enemy.domElement.y + ENEMY_HEIGHT &&
+        this.player.domElement.y > enemy.domElement.y)
+        isDead = true
+      });
+      return isDead;
+    } 
+};
