@@ -20,6 +20,9 @@ class Engine {
     this.livesEl = document.querySelector("#lives")
     //Music
     this.bgm = new Audio("../images/SpiderMan_music.mp3")
+    this.hitSound = new Audio("../images/hit.mp3")
+    this.gameOversound = new Audio("../images/death.mp3")
+
   }
 
   // The gameLoop will run every few milliseconds. It does several things
@@ -62,6 +65,8 @@ class Engine {
     // We check if the player is dead. If he is, we alert the user
     // and return from the method (Why is the return statement important?)
     if (this.isPlayerDead()) {
+      this.bgm.pause()
+      this.gameOversound.play()
       window.alert('Game over');
       return;
     }
@@ -69,10 +74,6 @@ class Engine {
     // If the player is not dead, then we put a setTimeout to run the gameLoop in 20 milliseconds
     setTimeout(this.gameLoop, 20);
   };
-  //Check if isPLayerDead is true then lose one life
-  // if(isPLayerDead()) {
-    
-  // }
   // This method is not implemented correctly, which is why
   // the burger never dies. In your exercises you will fix this method.
   isPlayerDead = () => {
@@ -84,12 +85,15 @@ class Engine {
         this.player.domElement.y > enemy.domElement.y) {
           enemy.destroyed = true
           enemy.root.removeChild(enemy.domElement);
+          this.hitSound.play()
           this.player.lives --
           this.livesEl.innerHTML = "🕷".repeat(this.player.lives)
         }
       });
       if(this.player.lives <= 0)
+      
       isDead = true
+      
       return isDead;
     } 
 };
