@@ -37,6 +37,7 @@ class Engine {
     // (new Date).getTime() evaluates to the number of milliseconds since January 1st, 1970 at midnight.
     if (this.lastFrame === undefined) {
       this.lastFrame = new Date().getTime();
+      
     }
 
     let timeDiff = new Date().getTime() - this.lastFrame;
@@ -67,10 +68,11 @@ class Engine {
     if (this.isPlayerDead()) {
       this.bgm.pause()
       this.gameOversound.play()
-      window.alert('Game over');
+      window.alert('Game over! Press "OK" to Restart');
+      document.location.reload()
       return;
     }
-
+    
     // If the player is not dead, then we put a setTimeout to run the gameLoop in 20 milliseconds
     setTimeout(this.gameLoop, 20);
   };
